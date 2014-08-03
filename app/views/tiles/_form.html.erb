@@ -1,45 +1,50 @@
-<%= form_for(@tile) do |f| %>
-  <% if @tile.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@tile.errors.count, "error") %> prohibited this tile from being saved:</h2>
-
-      <ul>
-      <% @tile.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+<%= form_for @tile, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :name, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :name, :class => 'text_field' %>
     </div>
-  <% end %>
+  </div>
+  <div class="control-group">
+    <%= f.label :item_code, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :item_code, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :weight, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :weight, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :retail_price, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :retail_price, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :resell_price, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :resell_price, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :wholesale_price, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :wholesale_price, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :dealer_price, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :dealer_price, :class => 'text_field' %>
+    </div>
+  </div>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :item_code %><br>
-    <%= f.text_field :item_code %>
-  </div>
-  <div class="field">
-    <%= f.label :weight %><br>
-    <%= f.text_field :weight %>
-  </div>
-  <div class="field">
-    <%= f.label :retail_price %><br>
-    <%= f.text_field :retail_price %>
-  </div>
-  <div class="field">
-    <%= f.label :resell_price %><br>
-    <%= f.text_field :resell_price %>
-  </div>
-  <div class="field">
-    <%= f.label :wholesale_price %><br>
-    <%= f.text_field :wholesale_price %>
-  </div>
-  <div class="field">
-    <%= f.label :dealer_price %><br>
-    <%= f.text_field :dealer_price %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                tiles_path, :class => 'btn' %>
   </div>
 <% end %>
