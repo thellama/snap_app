@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @tile.name %>
+</p>
+
+<p>
+  <strong>Item code:</strong>
+  <%= @tile.item_code %>
+</p>
+
+<p>
+  <strong>Weight:</strong>
+  <%= @tile.weight %>
+</p>
+
+<p>
+  <strong>Retail price:</strong>
+  <%= @tile.retail_price %>
+</p>
+
+<p>
+  <strong>Resell price:</strong>
+  <%= @tile.resell_price %>
+</p>
+
+<p>
+  <strong>Wholesale price:</strong>
+  <%= @tile.wholesale_price %>
+</p>
+
+<p>
+  <strong>Dealer price:</strong>
+  <%= @tile.dealer_price %>
+</p>
+
+<%= link_to 'Edit', edit_tile_path(@tile) %> |
+<%= link_to 'Back', tiles_path %>

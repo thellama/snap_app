@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  item_code: MyString
+  weight: 9.99
+  retail_price: 9.99
+  resell_price: 9.99
+  wholesale_price: 9.99
+  dealer_price: 9.99
+
+two:
+  name: MyString
+  item_code: MyString
+  weight: 9.99
+  retail_price: 9.99
+  resell_price: 9.99
+  wholesale_price: 9.99
+  dealer_price: 9.99
